@@ -1,0 +1,23 @@
+export const FETCH_{{ RESOURCE }}_REQUEST = 'FETCH_{{ RESOURCE }}_REQUEST';
+export const FETCH_{{ RESOURCE }} = 'FETCH_{{ RESOURCE }}';
+export const FETCH_{{ RESOURCE }}_SUCCESS = 'FETCH_{{ RESOURCE }}_SUCCESS';
+export const FETCH_{{ RESOURCE }}_FAILURE = 'FETCH_{{ RESOURCE }}_FAILURE';
+
+export function request{{ Resource }}() {
+  return { type: REQUEST_{{ RESOURCE }} };
+}
+
+export function fetch{{ Resource }}() {
+  return { type: FETCH_{{ RESOURCE }} };
+}
+
+export function fetch{{ Resource }}Success(items) {
+  return {
+    type: FETCH_{{ RESOURCE }}_SUCCESS,
+    items,
+  };
+}
+
+export function fetch{{ Resource }}Failure() {
+  return { type: FETCH_{{ RESOURCE }}_FAILURE };
+}

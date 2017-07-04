@@ -1,0 +1,29 @@
+const initialState = {
+  items: null,
+  isFetching: false,
+};
+
+export function reducer(state = initialState, action = {}) {
+  switch (action.type) {
+    case REQUEST_{{ RESOURCE }}:
+      return {
+        ...state,
+        isFetching: true
+      };
+      break;
+    case FETCH_{{ RESOURCE }}_SUCCESS:
+      return {
+        ...state,
+        items: action.items,
+        isFetching: false,
+      }
+    case FETCH_{{ RESOURCE }}_FAILURE:
+      return {
+        ...state,
+        isFetching: false,
+      };
+      break;
+    default:
+      return state;
+  }
+}
